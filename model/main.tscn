@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://1k672g2nsacs"]
+
+[ext_resource type="PackedScene" uid="uid://b6of7okkrmcxq" path="res://model/isac_body.tscn" id="1_053eo"]
+[ext_resource type="Script" path="res://model/main.gd" id="1_rbrws"]
+[ext_resource type="Texture2D" uid="uid://6ju1wjrrqkpd" path="res://background/floor.png" id="2_sfmkd"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_rbrws")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 76.0
+offset_top = 58.0
+offset_right = 887.0
+offset_bottom = 479.0
+texture = ExtResource("2_sfmkd")
+expand_mode = 1
+
+[node name="isacBody" parent="." instance=ExtResource("1_053eo")]
+position = Vector2(361, 265)
+priority = 1
+speed = 300
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(448, 276)
+
+[node name="log" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 82.0
+offset_right = 607.0
+offset_bottom = 135.0
